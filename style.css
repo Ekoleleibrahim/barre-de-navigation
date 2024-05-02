@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 body{
     font-family: sans-serif;
@@ -27,7 +27,11 @@ ul{
 li{
     float: left;
 }
-a{
+button{
+    outline: none;
+    border: none;
+}
+a,button{
     display: block;
     padding: 16px 20px;
     text-align: center;
@@ -42,6 +46,7 @@ a:hover{
     position: absolute;
     background-color: #cfdbd5;
     z-index: 99;
+    top: 50px;
 }
 .sous-nav a{
     display: block;
@@ -51,6 +56,9 @@ a:hover{
 .sous-nav a:hover{
     background-color: black;
     color: white;
+}
+.open button{
+    background-color: #242423;
 }
 .open:hover .sous-nav,.open:hover .fa-caret-down{
     display: inline-block;
@@ -62,12 +70,6 @@ a:hover{
     display: none;
 }
 
-ul.nav-bar-responsive{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .nav-bar2{
     display: none;
 }
@@ -76,10 +78,9 @@ ul.nav-bar-responsive{
     cursor: pointer;
 }
 .open-nav2:hover .nav2{
-    display: block;
-}
-ul.nav-bar-responsive li{
-    float: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .nav2{
     display: none;
@@ -90,6 +91,9 @@ ul.nav-bar-responsive li{
 }
 .nav2 li{
     float: none;
+}
+.nav2 .open button{
+    background-color: #333533;
 }
 .sousnav2{
     position: absolute;
